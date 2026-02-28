@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pendidikan Saya - Fahmi</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #e3f2fd, #bbdefb);
+        padding: 20px;
+      }
+
+      section {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      h2 {
+        color: #0d47a1;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background: #1565c0;
+        color: white;
+      }
+
+      td,
+      th {
+        padding: 10px;
+        border: 1px solid #1565c0;
+        text-align: center;
+      }
+
+      tr:hover {
+        background: #e3f2fd;
+      }
+
+      img {
+        width: 130px;
+        height: 80px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h2>Latar Belakang Pendidikan</h2>
+
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Nama Sekolah</th>
+          <th>Peta Lokasi</th>
+        </tr>
+
+        <tr>
+          <td>1</td>
+          <td>SDN Cinagara 03</td>
+          <td>
+            <a
+              href="https://www.google.com/maps/search/SDN+Cinagara+03"
+              target="_blank"
+            >
+              <img src="gambar/sekolah1.jpg" alt="" />
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>SMP Harapan Srogol</td>
+          <td>
+            <a
+              href="https://www.google.com/maps/search/SMP+Harapan+Srogol"
+              target="_blank"
+            >
+              <img src="gambar/sekolah2.jpg" alt="" />
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>SMA Harapan Bangsa</td>
+          <td>
+            <a
+              href="https://www.google.com/maps/search/SMA+Harapan+Bangsa"
+              target="_blank"
+            >
+              <img src="gambar/sekolah3.jpg" alt="" />
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>STT Terpadu Nurul Fikri</td>
+          <td>
+            <a
+              href="https://www.google.com/maps/search/STT+Terpadu+Nurul+Fikri"
+              target="_blank"
+            >
+              <img src="gambar/sekolah4.jpg" alt="" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
