@@ -1,0 +1,318 @@
+*{
+  margin:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html,body{
+  height:100%;
+}
+
+/* =====================
+   FULL LAYOUT
+===================== */
+
+.main-wrapper{
+  height:calc(100vh - 230px);
+}
+
+.content-frame{
+  width:100%;
+  height:100%;
+  border:none;
+  overflow:auto;
+}
+
+.sidebar{
+  background:#e3f2fd;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.custom-navbar{
+  padding-top:5px;
+  padding-bottom:5px;
+  background:#ffffff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link{
+  padding:5px 12px;
+  font-size:14px;
+}
+
+.navbar .nav-link:hover{
+  background:#1565c0;
+  color:white !important;
+  border-radius:5px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer-blue{
+  background:#1565c0;
+  padding:8px;
+}
+
+/* =====================
+   SECTION STYLE
+===================== */
+
+section{
+  padding:25px;
+}
+
+h2,h3{
+  color:#1565c0;
+  margin-bottom:10px;
+}
+
+hr{
+  border:1px solid #1565c0;
+  margin:15px 0;
+}
+
+/* =====================
+   TABLE STYLE
+===================== */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  background:#1565c0;
+  color:white;
+}
+
+td,th{
+  padding:10px;
+  border:1px solid #1565c0;
+  text-align:center;
+}
+
+tr:hover{
+  background:#e3f2fd;
+}
+
+
+/* =====================
+   PROFILE BORDER
+===================== */
+
+.profile-wrapper{
+  width:170px;
+  height:170px;
+  float:right;
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.profile-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.profile-wrapper span{
+  position:absolute;
+  background:linear-gradient(90deg,#1565c0,#008ccd);
+}
+
+.profile-wrapper span:nth-child(1){
+  top:0; left:-100%;
+  width:100%; height:4px;
+  animation:slideTop 2s linear infinite;
+}
+
+.profile-wrapper span:nth-child(2){
+  top:-100%; right:0;
+  width:4px; height:100%;
+  animation:slideRight 2s linear infinite .5s;
+}
+
+.profile-wrapper span:nth-child(3){
+  bottom:0; right:-100%;
+  width:100%; height:4px;
+  animation:slideBottom 2s linear infinite 1s;
+}
+
+.profile-wrapper span:nth-child(4){
+  bottom:-100%; left:0;
+  width:4px; height:100%;
+  animation:slideLeft 2s linear infinite 1.5s;
+}
+
+@keyframes slideTop{0%{left:-100%}100%{left:100%}}
+@keyframes slideRight{0%{top:-100%}100%{top:100%}}
+@keyframes slideBottom{0%{right:-100%}100%{right:100%}}
+@keyframes slideLeft{0%{bottom:-100%}100%{bottom:100%}}
+
+/* =====================
+   GALLERY
+===================== */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* =====================
+   LOGIN
+===================== */
+
+.login-body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+.login-box{
+  width:350px;
+  background:#fff;
+  padding:2rem;
+  border-radius:15px;
+}
+
+.btn-login{
+  width:100%;
+  padding:10px;
+  background:#1565c0;
+  border:none;
+  border-radius:8px;
+  color:white;
+}
+
+/* Carousel size */
+.carousel-img{
+  height:140px;
+  object-fit:cover;
+}
+
+/* Carousel size */
+.carousel-img{
+  height:140px;
+  object-fit:cover;
+}
+
+/* Center control vertically */
+.carousel-control-prev,
+.carousel-control-next{
+  top:50%;
+  transform:translateY(-50%);
+  width:5%;
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .carousel-img{
+    height:120px;
+  }
+}
+
+/* =========================
+   SIDEBAR HOVER STYLE
+========================= */
+
+.sidebar ul li a{
+  display:block;
+  padding:8px 12px;
+  border-radius:6px;
+  color:#1565c0;
+  font-weight:500;
+  transition:0.3s ease;
+}
+
+.sidebar ul li a:hover{
+  background:#1565c0;
+  color:#ffffff !important;
+  transform:translateX(5px);
+}
+
+/* =========================
+   MAIN CONTENT HOVER EFFECT
+========================= */
+
+.content-frame{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  border:none;
+  transition:0.3s ease;
+}
+
+.content-frame:hover{
+  box-shadow:0 0 15px rgba(21,101,192,0.4);
+}
+
+/* =========================
+   SECTION DALAM IFRAME
+========================= */
+
+section{
+  background:#ffffff;
+  border-radius:10px;
+  transition:0.3s ease;
+}
+
+section:hover{
+  box-shadow:0 5px 20px rgba(21,101,192,0.2);
+}
+
+/* =====================
+   STUDY PAGE
+===================== */
+
+/* Fade animation */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* Study Section */
+.study-section{
+  background:white;
+  padding:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  animation:fadeIn 1s ease-in-out;
+}
+
+/* Study heading */
+.study-section h2{
+  color:#0d47a1;
+  margin-bottom:20px;
+}
+
+/* Study table image */
+.study-section img{
+  width:130px;
+  height:80px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.study-section img:hover{
+  transform:scale(1.1);
+}
