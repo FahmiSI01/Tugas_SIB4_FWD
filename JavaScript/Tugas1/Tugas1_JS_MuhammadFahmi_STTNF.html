@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Luas Bangun Datar Muhammad Fahmi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+      .rectangle-shape {
+        width: 80px;
+        height: 50px;
+        background-color: #007bff;
+        border-radius: 8px;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <div class="container mt-4">
+      <!-- HEADER -->
+      <nav class="navbar navbar-dark bg-primary rounded shadow mb-4">
+        <div class="container">
+          <span class="navbar-brand fw-bold">
+            Menghitung Luas Bangun Datar
+          </span>
+        </div>
+      </nav>
+
+      <!-- ================= PERSEGI PANJANG ================= -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center p-3">
+            <div class="rectangle-shape"></div>
+            <h5 class="mt-2">Persegi Panjang</h5>
+          </div>
+
+          <div class="col-md-5">
+            <div class="input-group mb-2">
+              <input
+                type="number"
+                id="panjang"
+                class="form-control"
+                placeholder="Masukkan Panjang"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="number"
+                id="lebar"
+                class="form-control"
+                placeholder="Masukkan Lebar"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <button class="btn btn-primary" id="btnLuasPP">Hitung Luas</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BUJUR SANGKAR ================= -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center p-3">
+            <i class="fa-solid fa-square fa-4x text-success"></i>
+            <h5 class="mt-2">Bujur Sangkar</h5>
+          </div>
+
+          <div class="col-md-5">
+            <div class="input-group">
+              <input
+                type="number"
+                id="sisi"
+                class="form-control"
+                placeholder="Masukkan Sisi"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <button class="btn btn-primary" id="btnLuasBS">Hitung Luas</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SEGITIGA ================= -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center p-3">
+            <i class="fa-solid fa-play fa-4x text-danger"></i>
+            <h5 class="mt-2">Segitiga</h5>
+          </div>
+
+          <div class="col-md-5">
+            <div class="input-group mb-2">
+              <input
+                type="number"
+                id="alas"
+                class="form-control"
+                placeholder="Masukkan Alas"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="number"
+                id="tinggi"
+                class="form-control"
+                placeholder="Masukkan Tinggi"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <button class="btn btn-primary" id="btnLuasSG">Hitung Luas</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ==================================================
+      // FUNGSI MENGHITUNG LUAS PERSEGI PANJANG
+      // ================================
+      // Rumus: luas = panjang × lebar
+      // ==================================================
+      // Langkah:
+      // 1. Mengambil nilai panjang dari input
+      // 2. Mengambil nilai lebar dari input
+      // 3. Menghitung luas menggunakan operator perkalian
+      // 4. Menampilkan hasil menggunakan alert
+      // ==================================================
+      document.getElementById("btnLuasPP").onclick = function () {
+        let p = document.getElementById("panjang").value;
+        let l = document.getElementById("lebar").value;
+        let luas = p * l;
+        alert("Luas Persegi Panjang : " + luas + " cm²");
+      };
+
+      // ==================================================
+      // FUNGSI MENGHITUNG LUAS BUJUR SANGKAR
+      // ================================
+      // Rumus: luas = sisi × sisi
+      // ==================================================
+      // Langkah:
+      // 1. Mengambil nilai sisi dari input
+      // 2. Menghitung luas dengan mengalikan sisi dengan sisi
+      // 4. Menampilkan hasil menggunakan alert
+      // ==================================================
+      document.getElementById("btnLuasBS").onclick = function () {
+        let s = document.getElementById("sisi").value;
+        let luas = s * s;
+        alert("Luas Bujur Sangkar : " + luas + " cm²");
+      };
+
+      // ==================================================
+      // FUNGSI MENGHITUNG LUAS SEGITIGA
+      // ================================
+      // Rumus: luas = 1/2 × alas × tinggi
+      // ==================================================
+      // Langkah:
+      // 1. Mengambil nilai alas dari input
+      // 2. Mengambil nilai tinggi dari input
+      // 3. Menghitung luas menggunakan rumus segitiga
+      // 4. Menampilkan hasil menggunakan alert
+      // ==================================================
+      document.getElementById("btnLuasSG").onclick = function () {
+        let a = document.getElementById("alas").value;
+        let t = document.getElementById("tinggi").value;
+        let luas = 0.5 * a * t;
+        alert("Luas Segitiga : " + luas + " cm²");
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
